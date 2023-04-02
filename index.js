@@ -8,7 +8,6 @@ import { createInterface } from "readline";
 consoleStamp(console, { format: ':date(HH:MM:ss)' })
 
 const provider = new JsonRpcProvider();
-const parseFile = fileName => fs.readFileSync(fileName, "utf8").split('\n').map(str => str.trim()).filter(str => str.length > 10);
 
 function saveMnemonic(address, mnemonic) {
 #куда сохраняем аккаунты
