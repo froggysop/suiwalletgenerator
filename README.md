@@ -1,0 +1,2 @@
+# suiwalletgenerator
+Sui Wallet Generator
