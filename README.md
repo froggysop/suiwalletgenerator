@@ -1,2 +1,2 @@
-# suiwalletgenerator
+# sui-wallet-generator
 Sui Wallet Generator
