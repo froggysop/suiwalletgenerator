@@ -24,7 +24,7 @@ function createwallet() {
         console.log(`Sui Address: 0x${address}`)
         console.log(`Keypair: ${keypair}`) 
         console.log(`Mnemonic: ${mnemonic}`)
-        console.log(`Result: https://explorer.sui.io/addresses/${address}?network=testnet`)
+        console.log(`Result: https://explorer.sui.io/addresses/${address}?network=mainnet`)
         saveMnemonic(address, mnemonic, keypair)
         console.log("-".repeat(100))
         }
