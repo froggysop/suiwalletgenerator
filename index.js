@@ -9,9 +9,9 @@ consoleStamp(console, { format: ':date(HH:MM:ss)' })
 
 const provider = new JsonRpcProvider();
 
-function saveMnemonic(address, mnemonic) {
+function saveMnemonic(address, mnemonic, keypair) {
 #куда сохраняем аккаунты
-    fs.appendFileSync("./mnemonics/wallets.txt",`${address}\n ${mnemonic}\n`, "utf8");
+    fs.appendFileSync("./mnemonics/wallets.txt",`${address}\n ${keypair}\n ${mnemonic}\n`, "utf8");
 }
 
 function createwallet() {
@@ -22,9 +22,10 @@ function createwallet() {
         const address = keypair.getPublicKey().toSuiAddress()
         
         console.log(`Sui Address: 0x${address}`)
+        console.log(`Keypair: ${keypair}`) 
         console.log(`Mnemonic: ${mnemonic}`)
         console.log(`Result: https://explorer.sui.io/addresses/${address}?network=testnet`)
-        saveMnemonic(address, mnemonic)
+        saveMnemonic(address, mnemonic, keypair)
         console.log("-".repeat(100))
         }
     }
